@@ -6,7 +6,6 @@
 <body>
     <!-- Navbar -->
     <?php include 'partials/navbar.php'; ?>
-
     <!-- Footer -->
     <?php include 'partials/footer.php'; ?>
 
