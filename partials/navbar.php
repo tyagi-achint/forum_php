@@ -5,10 +5,10 @@ echo' <nav>
 </div>
 <div class="navigation1">
     <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#categories">Categories</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="about.php">About</a></li>
+        <li><a href="contact.php">Contact</a></li>
+        <li><a href="category.php">Categories</a></li>
     </ul>
 </div>
 <div class="navigation2">
