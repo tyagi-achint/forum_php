@@ -21,31 +21,7 @@
 
 
 
-    <main>
-        <section id="categories">
-            <h2>Categories</h2>
-            <ul>
-                <li><a href="#">Category 1</a></li>
-                <li><a href="#">Category 2</a></li>
-                <!-- Add more categories here -->
-            </ul>
-        </section>
-
-        <section id="posts">
-            <h2>Recent Posts</h2>
-            <ul>
-                <li>
-                    <h3><a href="#">Post Title 1</a></h3>
-                    <p>Posted by <span class="username">User123</span></p>
-                </li>
-                <li>
-                    <h3><a href="#">Post Title 2</a></h3>
-                    <p>Posted by <span class="username">User456</span></p>
-                </li>
-                <!-- Add more posts here -->
-            </ul>
-        </section>
-    </main>
+    
     <?php include 'pages/footer.php'; ?>
 
 
