@@ -63,6 +63,12 @@ nav button:hover {
 nav button:hover a {
   color: #333;
 }
+nav .navigation1,
+nav .navigation2 
+{
+  padding: 10px;
+
+}
 
 nav .navigation1 li {
  
@@ -142,6 +148,71 @@ nav .navigation1 li {
   color: #F1EFEF;
 } 
 
+/* SlideShow */
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+}
+
+.slideshow-container .slide {
+  display: none;
+}
+
+.slideshow-container img {
+  max-width: 100%;
+
+}
+
+
+.slideshow-container .prev,
+.slideshow-container .next {
+  position: absolute;
+  top: 45%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.slideshow-container .prev {
+  left: 30px;
+}
+
+.slideshow-container .next {
+  right: 30px;
+}
+
+.slideshow-container .prev:hover,
+.slideshow-container .next:hover {
+  background-color: white;
+  color: black;
+
+}
+
+.slideshow-container .dotBox {
+  position: absolute;
+  bottom: 5%;
+  right: 46vw;
+}
+
+.slideshow-container .dot {
+  height: 5px;
+  width: 20px;
+  margin: 0 2px;
+  background-color: #B4B4B3;
+  border-radius: 10%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.slideshow-container .active {
+  background-color: #717171;
+}
 
 /* Footer */
 footer {

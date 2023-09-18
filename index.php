@@ -6,6 +6,7 @@
 <body>
     <!-- Navbar -->
     <?php include 'partials/navbar.php'; ?>
+    <?php include 'partials/slideshow.php'; ?>
 
     <h1>Categories</h1>
     <div id="category">
@@ -57,6 +58,8 @@
     <!-- Footer -->
     <?php include 'partials/footer.php'; ?>
 
+    <script src="script.js"></script>
+    
 </body>
 
 </html>
