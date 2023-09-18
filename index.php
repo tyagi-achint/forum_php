@@ -16,28 +16,10 @@
 </head>
 
 <body>
+    <?php include 'pages/header.php'; ?>
 
-    <nav>
-        <div class="logo">
-            <img src="/images/logo.png" alt="CrowdCanvass">
-        </div>
-        <div class="navigation1">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#categories">Categories</a></li>
-            </ul>
-        </div>
-        <div class="navigation2">
-            <ul>
 
-                <li><button>
-                        <a href="#">Login</a></li></button>
-                <li><button><a href="#">Register</a></li></button>
-            </ul>
-        </div>
-    </nav>
+
 
     <main>
         <section id="categories">
@@ -64,16 +46,10 @@
             </ul>
         </section>
     </main>
+    <?php include 'pages/footer.php'; ?>
 
 
-    <footer>
-        Copyright © 2023. All rights reserved.
 
-        <p>
-            Designed &amp; Developed by <a target="_blank" href="https://tyagi-achint.github.io/">Achint Tyagi</a>
-
-        </p>
-    </footer>
 
 </body>
 
