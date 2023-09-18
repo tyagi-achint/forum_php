@@ -2,6 +2,9 @@
 <html lang="en">
 <!-- Head -->
 <?php include 'partials/head.php'; ?>
+<style>
+
+</style>
 
 <body>
     <!-- Navbar -->
@@ -11,6 +14,8 @@
 
     <!-- Footer -->
     <?php include 'partials/footer.php'; ?>
+
+    <script src="script.js"></script>
 
 </body>
 
