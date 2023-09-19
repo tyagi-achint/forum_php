@@ -17,23 +17,22 @@
     <div id="category">
         <div class="cards">
             <?php
-        $con=mysqli_connect($server,$username,$password);
-if (!$con){
-    die("Could not connect to server" .mysqli_connect_error());
-}
-$categorysql = "SELECT  * FROM `php_project`.`categories`;";
+        
+$categorysql = "SELECT  * FROM `categories`;";
 $categoryResult = mysqli_query($con,$categorysql);
 while ($row = mysqli_fetch_assoc($categoryResult)){
+    $categoryId = $row['id'];
     $categoryName = $row['name'];
     $categoryDesc = $row['description'];
     echo"<div class='card' style='background-image: url(https://source.unsplash.com/500x400/?$categoryName,programming);'>
     <div class='cardData'>
         <h3> $categoryName </h3>
         <p> " . substr($categoryDesc,0,150) . "... </p>
-        <button><a href=''>View</a></button>
+        <button><a href='threadlist.php?id=$categoryId'>View</a></button>
     </div>
 </div>";
 }
+$con->close();
 ?>
         </div>
     </div>

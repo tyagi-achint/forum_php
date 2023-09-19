@@ -1,11 +1,6 @@
 <?php
 include '_server.php';
 
-
-$con=mysqli_connect($server,$username,$password);
-if (!$con){
-die("Could not connect to server" .mysqli_connect_error());
-}
 function confirmPasswordSignup($password, $confirmPassword) {
 if ($password !== $confirmPassword) {
 echo "<script>
@@ -26,7 +21,7 @@ $confirmPassword = $_POST['confirmPassword'];
 
 if (confirmPasswordSignup($password, $confirmPassword)){
 try{
-$sql = "INSERT INTO `php_project`.`login_form` ( `name`, `username`, `email`, `password`, `dob`, `time`) VALUES
+$sql = "INSERT INTO `login_form` ( `name`, `username`, `email`, `password`, `dob`, `time`) VALUES
 ('$name', '$username', '$email', '$password', '$dob', CURRENT_TIMESTAMP);";
 if ($con->query($sql)== true){
 echo"<script>
@@ -66,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>";
 }
 }
-$con->close();
 
 
 

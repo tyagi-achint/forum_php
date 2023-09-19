@@ -1,9 +1,6 @@
 <?php
 include '_server.php';
-$con=mysqli_connect($server,$username,$password);
-if (!$con){
-    die("Could not connect to server" .mysqli_connect_error());
-}
+
 function confirmPassword($password, $confirmPassword) {
     if ($password !== $confirmPassword) {
        echo "<script>alert('Passwords do not match. Please try again.');</script>";
@@ -24,13 +21,13 @@ if (confirmPassword($password, $confirmPassword)){
    
 
 
-    $checkingUser = "SELECT  `sno` FROM `php_project`.`login_form` WHERE `username` = '$username' AND `email` = '$email' AND `dob` = '$dob';";
+    $checkingUser = "SELECT  `sno` FROM `login_form` WHERE `username` = '$username' AND `email` = '$email' AND `dob` = '$dob';";
     $result =mysqli_query( $con,$checkingUser);
     $fetchUser = mysqli_fetch_assoc($result);
     $sno = $fetchUser['sno'];
 
     if($sno !== NULL){
-        $changePasssword = "UPDATE `php_project`.`login_form` SET `password` = '$password' WHERE `sno` = '$sno';";
+        $changePasssword = "UPDATE `login_form` SET `password` = '$password' WHERE `sno` = '$sno';";
 
         if ($con->query($changePasssword)== true){
             echo"<script>alert('Success!');</script>";
@@ -58,10 +55,6 @@ else{
     </script>";
 }
 }
-    
-    
-
-$con->close();
 
 ?>
 

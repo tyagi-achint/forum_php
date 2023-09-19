@@ -7,65 +7,57 @@
 <body>
     <!-- Navbar -->
     <?php include 'partials/_navbar.php'; ?>
+
+    <?php
+        
+$catId =$_GET['id'];
+$catsql = "SELECT  * FROM `categories` WHERE `id` = '$catId';";
+$catResult = mysqli_query($con,$catsql);
+while ($row = mysqli_fetch_assoc($catResult)){
+ 
+    $catName = $row['name'];
+    $catDesc = $row['description'];
+    
+}
+
+?>
+
+
     <!-- Thread List -->
     <div class="threadlist">
         <div class="jumbotron">
-            <h1>Python</h1>
-            <h3>This is Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore corrupti laudantium minima,
-                obcaecati distinctio rem vero beatae temporibus repudiandae possimus nisi illum totam accusantium a
-                ullam
-                labore debitis doloribus! Exercitationem labore earum voluptatum, pariatur, aliquid libero placeat
-                delectus,
-                accusamus amet eaque perspiciatis. Necessitatibus at vero amet repudiandae deleniti, excepturi error,
-                nisi
-                numquam illo beatae alias.</h3>
+            <h1>Welcome to <?php echo $catName ; ?> Forums</h1>
+            <h3><?php echo $catDesc ; ?></h3>
             <hr>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates tempore nihil explicabo non? Dicta
-                consequatur nesciunt dolorem aspernatur illum ipsum vero ea magnam exercitationem. Numquam itaque in
-                reprehenderit esse blanditiis.</p>
+            <p>This is peer to peer forum. No Spam / Advertising / Self-promote in the forums / Do not post
+                copyright-infringing material / Do not post “offensive” posts, links or images / Do not cross post
+                questions / Remain respectful of other members at all times</p>
         </div>
         <h1>Browse Questions</h1>
         <div class="questionList">
             <ul class="list-unstyled">
-                <li class="media">
-                    <img src="/images/logo.png" alt="Generic placeholder image">
-                    <div class="media-body">
-                        <h5>List-based media object</h5>
-                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
-                            Cras
-                            purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
-                            nisi
-                            vulputate fringilla. Donec lacinia congue felis in faucibus.
-                        </p>
+                <?php
+        
+$catId =$_GET['id'];
+$threadsql = "SELECT  * FROM `threads` WHERE `cat_id` = '$catId';";
+$threadResult = mysqli_query($con,$threadsql);
+while ($row = mysqli_fetch_assoc($threadResult)){
+    $threadId = $row['id'];
+    $threadTitle = $row['title'];
+    $threadDesc = $row['description'];
+    
+    echo "<li class='media'>
+    <img src='images/logo.png' alt='Generic placeholder image'>
+    <div class='media-body'>
+        <h5>$threadTitle</h5>
+        <p> " . substr($threadDesc,0,150) . "... </p>
+    </div>
+</li>
+<hr>
+    ";
+}
 
-                    </div>
-                </li>
-                <hr>
-                <li class="media ">
-                    <img src="/images/logo.png" alt="Generic placeholder image">
-                    <div class="media-body">
-                        <h5>List-based media object</h5>
-                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
-                            Cras
-                            purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
-                            nisi
-                            vulputate fringilla. Donec lacinia congue felis in faucibus.
-                        </p>
-                    </div>
-                </li>
-                <hr>
-                <li class="media">
-                    <img src="/images/logo.png" alt="Generic placeholder image">
-                    <div class="media-body">
-                        <h5>List-based media object</h5>
-                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
-                            Cras
-                            purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
-                            nisi
-                            vulputate fringilla. Donec lacinia congue felis in faucibus.
-                        </p>
-                    </div>
-                </li>
+?>
             </ul>
         </div>
     </div>
