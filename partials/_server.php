@@ -2,7 +2,8 @@
 
 $server="localhost";
 $username="root";
-$password="";
+$password="Joker.321@";
+
 // function confirmPassword($password, $confirmPassword) {
 //     if ($password !== $confirmPassword) {
 //         echo "<script>alert('Passwords do not match. Please try again.');</script>";

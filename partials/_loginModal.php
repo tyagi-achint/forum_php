@@ -26,7 +26,7 @@ $con->close();
 <div id="loginModal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
-        <div id="loginSignup">
+        <div class="loginSignup">
             <h2>User Login Form</h2>
             <div class='container'>
                 <form action='_loginModal.php' method='post'>
@@ -40,7 +40,7 @@ $con->close();
             </div>
             <div class='bottomContainer'>
                 <p>forgot password? <a href=''>reset it.</a> </p>
-                <p>New user? <a id="signup">Register</a></p>
+                <p>New user? <a class="signup">Signup</a></p>
             </div>
         </div>
     </div>
