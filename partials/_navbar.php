@@ -20,5 +20,5 @@
 </nav>
 
 <!-- Modal -->
-<?php include 'partials/loginModal.php'; ?>
-<?php include 'partials/signupModal.php'; ?>
+<?php include 'partials/_loginModal.php'; ?>
+<?php include 'partials/_signupModal.php'; ?>

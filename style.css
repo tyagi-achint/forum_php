@@ -232,7 +232,9 @@ nav .navigation1 li {
 
 .modal-content {
   position: relative;
-  background-color: #fefefe;
+  /* background-color: #fefefe; */
+  background-color: #cee6f3;
+  align-items: center;
   margin: auto;
   padding: 20px;
   border: 2px solid #888;
@@ -350,4 +352,96 @@ nav .navigation2 {
   flex: 0 1 70% ; 
       }
 
+}
+
+
+/* Form */
+
+
+#loginSignup form {
+  background-color: #eeeded;
+  border: 1px solid #ccc;
+  padding: 2%;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 40%;
+}
+
+#loginSignup label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  font-weight: bolder;
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: rgb(60, 58, 55);
+}
+
+#loginSignup input:focus {
+  outline: none;
+}
+
+#loginSignup button[type="submit"] {
+  margin-right: 15px;
+}
+#loginSignup button {
+  font-size: 20px;
+  font-weight: bolder;
+
+  outline: 0;
+  border-radius: 7mm;
+  min-width: 35%;
+  background: #56a6dc;
+  border: 0;
+  padding: 10px;
+  color: #ffffff;
+  cursor: pointer;
+}
+#loginSignup .bottomContainer {
+  text-align: center;
+}
+#loginSignup .bottomContainer p a {
+  font-weight: bolder;
+  text-decoration: none !important;
+  color: black !important;
+}
+#loginSignup .bottomContainer p a:hover {
+  text-decoration: underline !important;
+  cursor: pointer;
+}
+#loginSignup .bottomContainer p {
+  margin: 5px !important;
+  font-family: cursive;
+}
+
+#loginSignup .messagecontainer {
+  margin-top: 10%;
+  background-color: #eeeded;
+  border: 1px solid #ccc;
+  padding: 2%;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 30%;
+}
+
+
+#loginSignup h2 {
+  text-align: center;
+  color: #333;
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Playfair Display", serif;
+  font-weight: 800;
+}
+#loginSignup .container {
+  display: flex;
+  justify-content: center;
 }

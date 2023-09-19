@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Head -->
-<?php include 'partials/head.php'; ?>
+<?php include 'partials/_head.php'; ?>
 <style>
 
 </style>
 
 <body>
     <!-- Navbar -->
-    <?php include 'partials/navbar.php'; ?>
+    <?php include 'partials/_navbar.php'; ?>
 
 
 
     <!-- Footer -->
-    <?php include 'partials/footer.php'; ?>
+    <?php include 'partials/_footer.php'; ?>
 
     <script src="script.js"></script>
 

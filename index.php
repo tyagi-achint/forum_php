@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Head -->
-<?php include 'partials/head.php'; ?>
+<?php include 'partials/_head.php'; ?>
 <style>
 
 </style>
 
 <body>
     <!-- Navbar -->
-    <?php include 'partials/navbar.php'; ?>
-    <?php include 'partials/slideshow.php'; ?>
+    <?php include 'partials/_navbar.php'; ?>
+    <?php include 'partials/_slideshow.php'; ?>
 
     <h1>Categories</h1>
     <div id="category">
@@ -59,7 +59,7 @@
     </div>
 
     <!-- Footer -->
-    <?php include 'partials/footer.php'; ?>
+    <?php include 'partials/_footer.php'; ?>
 
     <script src="script.js"></script>
     <script>
