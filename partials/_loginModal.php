@@ -39,9 +39,12 @@ $con->close();
                 </form>
             </div>
             <div class='bottomContainer'>
-                <p>forgot password? <a href='?action=forgotPass'>reset it.</a> </p>
-                <p>New user? <a href='?action=newUser'>signup.</a></p>
+                <p>forgot password? <a href=''>reset it.</a> </p>
+                <p>New user? <a id="signup">Register</a></p>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Modal -->
+<?php include 'partials/_signupModal.php'; ?>

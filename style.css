@@ -357,7 +357,6 @@ nav .navigation2 {
 
 /* Form */
 
-
 #loginSignup form {
   background-color: #eeeded;
   border: 1px solid #ccc;
@@ -373,7 +372,7 @@ nav .navigation2 {
   font-weight: bold;
 }
 
-input {
+#loginSignup input {
   font-weight: bolder;
   width: 95%;
   padding: 10px;
@@ -391,31 +390,35 @@ input {
 #loginSignup button[type="submit"] {
   margin-right: 15px;
 }
+
 #loginSignup button {
   font-size: 20px;
   font-weight: bolder;
-
   outline: 0;
   border-radius: 7mm;
   min-width: 35%;
-  background: #56a6dc;
+  background: #56a6dc !important;
   border: 0;
   padding: 10px;
   color: #ffffff;
   cursor: pointer;
 }
+
 #loginSignup .bottomContainer {
   text-align: center;
 }
+
 #loginSignup .bottomContainer p a {
   font-weight: bolder;
   text-decoration: none !important;
   color: black !important;
 }
+
 #loginSignup .bottomContainer p a:hover {
   text-decoration: underline !important;
   cursor: pointer;
 }
+
 #loginSignup .bottomContainer p {
   margin: 5px !important;
   font-family: cursive;
@@ -433,6 +436,7 @@ input {
 
 
 #loginSignup h2 {
+  margin-bottom: 10px;
   text-align: center;
   color: #333;
   font-size: 40px;
@@ -441,6 +445,7 @@ input {
   font-family: "Playfair Display", serif;
   font-weight: 800;
 }
+
 #loginSignup .container {
   display: flex;
   justify-content: center;
