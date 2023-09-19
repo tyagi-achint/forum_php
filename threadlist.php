@@ -1,38 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Head -->
+<?php include 'partials/_head.php'; ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<style>
-
-</style>
 
 <body>
-
-    <nav>
-        <div class="logo">
-            <img src="images/logo.png" alt="CrowdCanvass">
-        </div>
-        <div class="navigation1">
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="about.php">About</a></li>
-                <li><a href="contact.php">Contact</a></li>
-                <li><a href="category.php">Categories</a></li>
-            </ul>
-        </div>
-        <div class="navigation2">
-            <ul>
-
-                <li><button id="login">Login</button></li>
-                <li><button id="signup">Register</button></li>
-            </ul>
-        </div>
-    </nav>
+    <!-- Navbar -->
+    <?php include 'partials/_navbar.php'; ?>
+    <!-- Thread List -->
     <div class="threadlist">
         <div class="jumbotron">
             <h1>Python</h1>
@@ -97,8 +72,8 @@
 
 
 
-
-
+    <!-- Footer -->
+    <?php include 'partials/_footer.php'; ?>
 
     <script src="script.js"></script>
 

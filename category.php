@@ -2,9 +2,7 @@
 <html lang="en">
 <!-- Head -->
 <?php include 'partials/_head.php'; ?>
-<style>
 
-</style>
 
 <body>
     <!-- Navbar -->

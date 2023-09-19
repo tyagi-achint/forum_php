@@ -259,6 +259,171 @@ nav .navigation1 li {
   cursor: pointer;
 }
 
+/* Form */
+
+.loginSignup form {
+  background-color: #eeeded;
+  border: 1px solid #ccc;
+  padding: 2%;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 40%;
+}
+
+.loginSignup label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.loginSignup input {
+  font-weight: bolder;
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: rgb(60, 58, 55);
+}
+
+.loginSignup input:focus {
+  outline: none;
+}
+
+.loginSignup button[type="submit"] {
+  margin-right: 15px;
+}
+
+.loginSignup button {
+  font-size: 20px;
+  font-weight: bolder;
+  outline: 0;
+  border-radius: 7mm;
+  min-width: 35%;
+  background: #56a6dc !important;
+  border: 0;
+  padding: 10px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.loginSignup .bottomContainer {
+  text-align: center;
+}
+
+.loginSignup .bottomContainer p a {
+  font-weight: bolder;
+  text-decoration: none !important;
+  color: black !important;
+}
+
+.loginSignup .bottomContainer p a:hover {
+  text-decoration: underline !important;
+  cursor: pointer;
+}
+
+.loginSignup .bottomContainer p {
+  margin: 5px !important;
+  font-family: cursive;
+}
+
+.loginSignup .messagecontainer {
+  margin-top: 10%;
+  background-color: #eeeded;
+  border: 1px solid #ccc;
+  padding: 2%;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 30%;
+}
+
+
+.loginSignup h2 {
+  margin-bottom: 10px;
+  text-align: center;
+  color: #333;
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Playfair Display", serif;
+  font-weight: 800;
+}
+
+.loginSignup .container {
+  display: flex;
+  justify-content: center;
+}
+
+/* threadlist */
+
+.threadlist {
+  width: 60%;
+  margin: 30px auto;
+}
+
+.jumbotron {
+
+  padding: 20px;
+  background-color: #F1EFEF;
+}
+
+.jumbotron h1 {
+  margin: 10px 0 !important;
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.jumbotron h3 {
+  font-size: 1.25rem;
+  font-weight: 100 !important;
+}
+
+.jumbotron hr {
+  margin: 1.5rem 0;
+}
+
+.jumbotron p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.threadlist h1 {
+  margin-left: 0;
+}
+
+.questionList {
+  border: 2px solid #F1EFEF;
+  padding: 20px;
+}
+
+.questionList .media {
+  display: flex;
+
+}
+
+.questionList .media h5 {
+  margin: 0 10px 5px 0;
+  font-size: 1.25rem;
+
+}
+
+.questionList .media img {
+  width: 64px;
+  height: 64px;
+  margin-right: 10px;
+}
+
+.list-unstyled {
+  padding: 0;
+}
+
+.list-unstyled hr {
+  margin: 20px auto;
+  width: 40%;
+}
+
 /* Footer */
 footer {
   text-align: center;
@@ -355,98 +520,3 @@ nav .navigation2 {
 }
 
 
-/* Form */
-
-.loginSignup form {
-  background-color: #eeeded;
-  border: 1px solid #ccc;
-  padding: 2%;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 40%;
-}
-
-.loginSignup label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.loginSignup input {
-  font-weight: bolder;
-  width: 95%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  color: rgb(60, 58, 55);
-}
-
-.loginSignup input:focus {
-  outline: none;
-}
-
-.loginSignup button[type="submit"] {
-  margin-right: 15px;
-}
-
-.loginSignup button {
-  font-size: 20px;
-  font-weight: bolder;
-  outline: 0;
-  border-radius: 7mm;
-  min-width: 35%;
-  background: #56a6dc !important;
-  border: 0;
-  padding: 10px;
-  color: #ffffff;
-  cursor: pointer;
-}
-
-.loginSignup .bottomContainer {
-  text-align: center;
-}
-
-.loginSignup .bottomContainer p a {
-  font-weight: bolder;
-  text-decoration: none !important;
-  color: black !important;
-}
-
-.loginSignup .bottomContainer p a:hover {
-  text-decoration: underline !important;
-  cursor: pointer;
-}
-
-.loginSignup .bottomContainer p {
-  margin: 5px !important;
-  font-family: cursive;
-}
-
-.loginSignup .messagecontainer {
-  margin-top: 10%;
-  background-color: #eeeded;
-  border: 1px solid #ccc;
-  padding: 2%;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 30%;
-}
-
-
-.loginSignup h2 {
-  margin-bottom: 10px;
-  text-align: center;
-  color: #333;
-  font-size: 40px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: "Playfair Display", serif;
-  font-weight: 800;
-}
-
-.loginSignup .container {
-  display: flex;
-  justify-content: center;
-}
