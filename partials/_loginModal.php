@@ -12,24 +12,28 @@ $password = $_POST['password'];
     $log = "SELECT `password` FROM `php_project`.`login_form` WHERE `username` = '$username';";
     $fetchPassword = mysqli_fetch_assoc(mysqli_query( $con,$log));
     if ( $fetchPassword['password']== $password){
-    $messageSuccess = true;
+        echo"<script>alert('Success!');</script>";
+      
         }
         else{
-            $messageError = true;
+            echo"<script>alert('Details does not match. Please try again.');
+            document.addEventListener('DOMContentLoaded', function () {
+                var loginmodal = document.getElementById('loginModal');
+                loginmodal.style.display = 'block';
+            });</script>";
         }
 }
 $con->close();
 
 
-
 ?>
 <div id="loginModal" class="modal">
     <div class="modal-content">
-        <span class="close">&times;</span>
+        <span id='close0' class="close">&times;</span>
         <div class="loginSignup">
             <h2>User Login Form</h2>
             <div class='container'>
-                <form action='_loginModal.php' method='post'>
+                <form method='post'>
                     <input type='text' name='username' placeholder='Username' required>
                     <input type='password' name='password' placeholder='Password' required>
                     <div style='text-align: center;'>
@@ -39,12 +43,9 @@ $con->close();
                 </form>
             </div>
             <div class='bottomContainer'>
-                <p>forgot password? <a href=''>reset it.</a> </p>
-                <p>New user? <a class="signup">Signup</a></p>
+                <p>forgot password? <a id='openResetModal'>reset it.</a> </p>
+                <p>New user? <a id='openSignupModal'>signup</a></p>
             </div>
         </div>
     </div>
 </div>
-
-<!-- Modal -->
-<?php include 'partials/_signupModal.php'; ?>

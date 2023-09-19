@@ -4,12 +4,21 @@ $con=mysqli_connect($server,$username,$password);
 if (!$con){
     die("Could not connect to server" .mysqli_connect_error());
 }
-if (isset($_POST['username'])){
-$confirmPassword = $_POST['confirmPassword'];
-$username = $_POST['username'];
-$password = $_POST['password'];
-$dob = $_POST['dob'];
-$email = $_POST['email'];
+function confirmPassword($password, $confirmPassword) {
+    if ($password !== $confirmPassword) {
+       echo "<script>alert('Passwords do not match. Please try again.');</script>";
+        return false;
+
+    }
+    return true;
+}
+if (isset($_GET['email'])){
+$confirmPassword = $_GET['confirmPassword'];
+$username = $_GET['username'];
+$password = $_GET['password'];
+$dob = $_GET['dob'];
+$email = $_GET['email'];
+
 
 if (confirmPassword($password, $confirmPassword)){
    
@@ -24,30 +33,45 @@ if (confirmPassword($password, $confirmPassword)){
         $changePasssword = "UPDATE `php_project`.`login_form` SET `password` = '$password' WHERE `sno` = '$sno';";
 
         if ($con->query($changePasssword)== true){
-        $messageSuccess = true;
+            echo"<script>alert('Success!');</script>";
             }}
         else  {
-                $messageError = true;
+            echo"<script>alert('Details does not match. Please try again.');
+            document.addEventListener('DOMContentLoaded', function () {
+                var resetmodal = document.getElementById('resetModal');
+                resetmodal.style.display = 'block';
+            });</script>";
             }
 
         
         
     }
-    else{
-        forgotPass();
-    }
+    
+else{
+    echo"<script>
+   
+    document.addEventListener('DOMContentLoaded', function () {
+        var resetmodal = document.getElementById('resetModal');
+        resetmodal.style.display = 'block';
+    });
+   
+    </script>";
 }
+}
+    
+    
+
 $con->close();
 
-
 ?>
+
 <div id="resetModal" class="modal">
     <div class="modal-content">
-        <span class="close">&times;</span>
+        <span id='close2' class="close">&times;</span>
         <div class="loginSignup">
             <h2>Change Password Form</h2>
             <div class='container'>
-                <form action='changePass.php' method='post'>
+                <form method='get'>
                     <input type='text' name='username' placeholder='Username' required>
                     <input type='email' name='email' placeholder='Email' required>
                     <input type='password' name='password' placeholder='Password' required>
@@ -62,12 +86,9 @@ $con->close();
             </div>
 
             <div class='bottomContainer'>
-                <p>New user? <a href=''>signup.</a></p>
-                <p>old user? <a href=''>login.</a></p>
+                <p>New user? <a id='openSignupModalFromReset'>signup.</a></p>
+                <p>old user? <a id='openLoginModalFromReset'>login.</a></p>
             </div>
         </div>
     </div>
 </div>
-
-<?php include 'partials/_signupModal.php'; ?>
-<?php include 'partials/_loginModal.php'; ?>

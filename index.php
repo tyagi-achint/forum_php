@@ -58,10 +58,16 @@
         </div>
     </div>
 
+
+
     <!-- Footer -->
     <?php include 'partials/_footer.php'; ?>
 
+
+
+    <!-- Script -->
     <script src="script.js"></script>
+    <!-- ScrollBar script -->
     <script>
     let slideIndex = 1;
     showSlides(slideIndex);
