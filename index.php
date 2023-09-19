@@ -2,6 +2,8 @@
 <html lang="en">
 <!-- Head -->
 <?php include 'partials/_head.php'; ?>
+<?php include 'partials/_server.php'; ?>
+
 <style>
 
 </style>
@@ -9,54 +11,35 @@
 <body>
     <!-- Navbar -->
     <?php include 'partials/_navbar.php'; ?>
+    <!-- Slideshow -->
     <?php include 'partials/_slideshow.php'; ?>
 
-    <h1>Categories</h1>
+    <!-- Categories -->
+    <h1>Browse Categories</h1>
     <div id="category">
         <div class="cards">
-
-            <div class="card">
-
-                <div class="cardData">
-                    <h3>Hello</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, quibusdam?</p>
-                    <button><a href="">View</a></button>
-                </div>
-            </div>
-            <div class="card">
-
-                <div class="cardData">
-                    <h3>Hello</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, quibusdam?</p>
-                    <button><a href="">View</a></button>
-                </div>
-            </div>
-            <div class="card">
-
-                <div class="cardData">
-                    <h3>Hello</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, quibusdam?</p>
-                    <button><a href="">View</a></button>
-                </div>
-            </div>
-            <div class="card">
-
-                <div class="cardData">
-                    <h3>Hello</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, quibusdam?</p>
-                    <button><a href="">View</a></button>
-                </div>
-            </div>
-            <div class="card">
-
-                <div class="cardData">
-                    <h3>Hello</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, quibusdam?</p>
-                    <button><a href="">View</a></button>
-                </div>
-            </div>
+            <?php
+        $con=mysqli_connect($server,$username,$password);
+if (!$con){
+    die("Could not connect to server" .mysqli_connect_error());
+}
+$categorysql = "SELECT  * FROM `php_project`.`categories`;";
+$categoryResult = mysqli_query($con,$categorysql);
+while ($row = mysqli_fetch_assoc($categoryResult)){
+    $categoryName = $row['name'];
+    $categoryDesc = $row['description'];
+    echo"<div class='card' style='background-image: url(https://source.unsplash.com/500x400/?$categoryName,programming);'>
+    <div class='cardData'>
+        <h3> $categoryName </h3>
+        <p> " . substr($categoryDesc,0,150) . "... </p>
+        <button><a href=''>View</a></button>
+    </div>
+</div>";
+}
+?>
         </div>
     </div>
+
 
 
 
