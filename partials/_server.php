@@ -3,7 +3,7 @@
 $server="localhost";
 $username="root";
 $password="Joker.321@";
-$database ="php_project";
+$database ="crowd_canvass";
 
 
 $con=mysqli_connect($server,$username,$password,$database);
