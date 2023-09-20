@@ -428,7 +428,7 @@ background-color:#838788 !important ;
 
 .threadform {
   margin-top: 20px;
-  padding: 0 20px 20px ;
+  padding: 0 0 20px ;
 }
 
 .threadform form {
@@ -436,7 +436,7 @@ background-color:#838788 !important ;
   padding: 2%;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 80%;
+  
 }
 
 .threadform label {
@@ -446,7 +446,7 @@ background-color:#838788 !important ;
   font-size: large;
 }
 
-.threadform input {
+.threadform input,.threadform textarea{
   font-weight: bolder;
   width: 95%;
   padding: 10px;
@@ -457,11 +457,11 @@ background-color:#838788 !important ;
   color: rgb(60, 58, 55);
 }
 
-.threadform input:focus {
+
+.threadform input:focus,.threadform textarea:focus {
   outline: none;
   border: 2px solid #a2a5a6;
   box-shadow: 0 0 10px #a2a5a6;
-
 
 }
 
@@ -502,6 +502,27 @@ background-color:#838788 !important ;
   font-size: 30px;
   font-weight: bold;
   cursor: pointer;
+}
+
+#commentData {
+  padding: 10px;
+  border: 1px solid #a2a5a6;
+
+  border-radius: 6px;
+  overflow-y: auto;
+  max-height: 50vh;
+}
+#commentData::-webkit-scrollbar {
+  width: 10px
+}
+#commentData::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius:30px ;
+  margin:4px 0;
+}
+#commentData::-webkit-scrollbar-thumb {
+  background: grey; 
+  border-radius: 30px;
 }
 
 /* Footer */

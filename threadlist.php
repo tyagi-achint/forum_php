@@ -94,8 +94,9 @@ $threadNoResult = false;
     echo "<li class='media'>
     <img src='images/logo.png' alt='Generic placeholder image'>
     <div class='media-body'><a href='thread.php?id=$threadId'>
-        <h5 style='color: black;'> $threadTitle</h5>
-        <p style='color: grey;'>  " . substr($threadDesc,0,150) . "... </p></a>
+  <h5 style='color: black;'> $threadTitle</h5>
+  
+        <p style='color: grey;'>  "  .substr($threadDesc,0,150).  "... </p></a>
     </div>
 </li>
 <hr>
@@ -115,6 +116,10 @@ if ($threadNoResult){
             </ul>
         </div>
     </div>
+
+
+    <!-- Comment Modal -->
+
 
 
 
