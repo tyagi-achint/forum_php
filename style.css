@@ -234,11 +234,10 @@ nav .navigation1 li {
 .modal-content {
   position: relative;
   /* background-color: #fefefe; */
-  background-color: #cee6f3;
+  background-color: #F1EFEF;
   align-items: center;
   margin: auto;
   padding: 20px;
-  border: 2px solid #888;
   border-radius: 10px;
   width: 80%;
 }
@@ -263,7 +262,8 @@ nav .navigation1 li {
 /* Form */
 
 .loginSignup form {
-  background-color: #eeeded;
+  background-color: #fefefe;
+
   border: 1px solid #ccc;
   padding: 2%;
   border-radius: 5px;
@@ -271,11 +271,7 @@ nav .navigation1 li {
   width: 40%;
 }
 
-.loginSignup label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
+
 
 .loginSignup input {
   font-weight: bolder;
@@ -297,15 +293,15 @@ nav .navigation1 li {
 }
 
 .loginSignup button {
+  color: white;
+background-color:#838788 !important ;
   font-size: 20px;
   font-weight: bolder;
   outline: 0;
   border-radius: 7mm;
   min-width: 35%;
-  background: #56a6dc !important;
   border: 0;
   padding: 10px;
-  color: #ffffff;
   cursor: pointer;
 }
 
@@ -423,6 +419,89 @@ nav .navigation1 li {
 .list-unstyled hr {
   margin: 20px auto;
   width: 40%;
+}
+.threadform h1 {
+  margin-left: 0;
+  margin-bottom: 0;
+
+}
+
+.threadform {
+  margin-top: 20px;
+  padding: 0 20px 20px ;
+}
+
+.threadform form {
+  border: 1px solid #ccc;
+  padding: 2%;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+}
+
+.threadform label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: large;
+}
+
+.threadform input {
+  font-weight: bolder;
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: rgb(60, 58, 55);
+}
+
+.threadform input:focus {
+  outline: none;
+  border: 2px solid #a2a5a6;
+  box-shadow: 0 0 10px #a2a5a6;
+
+
+}
+
+.threadform button {
+  font-size: 20px;
+  font-weight: bolder;
+  border: 1px solid #525454;
+  outline: 0;
+  border-radius: 1mm;
+  min-width: 35%;
+  padding: 10px;
+  cursor: pointer;
+  color: #525454;
+  background-color: white !important;
+}
+.threadform button:hover{
+  border: 1px solid #838788;
+
+  color: white;
+background-color:#838788 !important ;
+
+}
+
+#threadAlert {
+  background-color: #C3EDC0;
+  margin: auto;
+  padding: 8px 10px;
+  position: relative;
+  text-align: center;
+}
+
+#closeAlert {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  color: #6f6f6f;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* Footer */

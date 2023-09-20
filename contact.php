@@ -13,7 +13,7 @@
     <!-- Footer -->
     <?php include 'partials/_footer.php'; ?>
 
-    <script src="script.js"></script>
+
 
 </body>
 

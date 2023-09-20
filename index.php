@@ -45,8 +45,7 @@ $con->close();
 
 
 
-    <!-- Script -->
-    <script src="script.js"></script>
+
     <!-- ScrollBar script -->
     <script>
     let slideIndex = 1;

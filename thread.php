@@ -33,7 +33,29 @@ while ($row = mysqli_fetch_assoc($threadResult)){
             <p>Posted by : <b>Achint </b>
             </p>
         </div>
-        <h1>Browse Questions</h1>
+        <h1>Discussion</h1>
+        <div class="questionList">
+            <ul class="list-unstyled">
+                <li class='media'>
+                    <img src='images/logo.png' alt='Generic placeholder image'>
+                    <div class='media-body'><a href='thread.php?id=$threadId'>
+                            <h5 style='color: black;'> $threadTitle</h5>
+                            <p style='color: grey;'> " . substr($threadDesc,0,150) . "... </p>
+                        </a>
+                    </div>
+                </li>
+                <hr>
+                <li class='media'>
+                    <div class='media-body'>
+                        <h5 style='color: black;'>No Thread Found</h5>
+                        <p style='color: grey;'>Be the first person to reply this question</p>
+                    </div>
+                </li>
+
+
+
+            </ul>
+        </div>
     </div>
 
 
@@ -42,7 +64,7 @@ while ($row = mysqli_fetch_assoc($threadResult)){
     <!-- Footer -->
     <?php include 'partials/_footer.php'; ?>
 
-    <script src="script.js"></script>
+
 
 </body>
 
