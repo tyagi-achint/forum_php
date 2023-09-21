@@ -43,6 +43,10 @@ $con->close();
     <!-- Footer -->
     <?php include 'partials/_footer.php'; ?>
 
+    <!-- SignUp Alert -->
+
+    <?php include 'partials/_signupAlert.php'; ?>
+
 
 
 

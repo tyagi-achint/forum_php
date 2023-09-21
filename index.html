@@ -13,6 +13,23 @@
 
 <body>
 
+    <div id='LoginSignupAlert' class='LoginSignup'>
+        <span id='LoginSignupclose'>&times;</span>
+        <p><b>Failed! </b> </p>
+    </div>
+
+    <script>
+        let LoginSignupAlert = document.getElementById('LoginSignupAlert');
+        let LoginSignupclose = document.getElementById('LoginSignupclose');
+        LoginSignupclose.onclick = function () {
+            LoginSignupAlert.style.display = 'none';
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            var signupmodal = document.getElementById('signupModal');
+            signupmodal.style.display = 'block';
+        });
+    </script>
+    <input type="text " value="">
     <nav>
         <div class="logo">
             <img src="images/logo.png" alt="CrowdCanvass">
@@ -36,11 +53,7 @@
 
     <div onclick="sendCommentId('hello')" class='media-body commentTrigger' style='cursor: pointer;'>A</div>
 
-    <script>
-        function sendCommentId(variable) {
 
-        }
-    </script>
     <?php
 
     echo"variable";

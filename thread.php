@@ -38,7 +38,6 @@
             echo"
             <div id='threadAlert'>
             <span id='closeAlert'>&times;</span>
-           
             <p><b>Success!  </b>Your Comment has been added!  Thankyou for your comment. </p>
         </div>";
         }

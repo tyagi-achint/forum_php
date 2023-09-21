@@ -518,13 +518,35 @@ background-color:#838788 !important ;
 #commentData::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey; 
   border-radius:30px ;
-  margin:4px 0;
 }
 #commentData::-webkit-scrollbar-thumb {
   background: grey; 
   border-radius: 30px;
 }
 
+/* LoginSignup Alert */
+.AlertLoginSignup {
+  background-color: #D83F31;
+  margin: auto;
+  padding: 8px 10px;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  height: 22px;
+}
+
+.Alertclosebutton {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  color: #2e2e2e;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
 /* Footer */
 footer {
   text-align: center;

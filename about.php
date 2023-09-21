@@ -12,6 +12,7 @@
 
     <!-- Footer -->
     <?php include 'partials/_footer.php'; ?>
+    <?php include 'partials/_signupAlert.php'; ?>
 
 
 
