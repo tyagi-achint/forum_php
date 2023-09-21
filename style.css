@@ -52,8 +52,6 @@ nav img {
 }
 
 nav button  {
-
-  
   border: 1px solid #ffffff;
   color: #ffffff ;
   
@@ -62,6 +60,16 @@ nav button  {
 nav button:hover {
   color: #333;
   background: #ffffff !important;
+}
+
+nav #userlogin{
+  font-weight: bolder;
+  border-bottom: 2px solid #ffffff;
+  color: #ffffff ;
+
+  padding: 7px 12px 0;
+  font-size: large;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 

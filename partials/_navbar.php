@@ -10,13 +10,28 @@
             <li><a href="category.php">Categories</a></li>
         </ul>
     </div>
-    <div class="navigation2">
-        <ul>
 
+
+    <?php 
+    session_start();
+    if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 'true'){
+        echo'<div class="navigation2">
+        <ul>
+            <li id="userlogin">'.$_SESSION['name'].'</li>
+            <li><a href="partials/_handelLogout.php"><button>Logout</button></a></li>
+        </ul>
+    </div>';
+    }
+    else{
+        echo' <div class="navigation2">
+        <ul>
             <li><button id="login">Login</button></li>
             <li><button id="signup">Register</button></li>
         </ul>
-    </div>
+    </div>';
+    }
+    ?>
+
 </nav>
 
 <!-- Modal -->

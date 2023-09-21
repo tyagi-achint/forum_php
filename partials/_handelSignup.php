@@ -8,13 +8,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $dob = $_POST['dob'];
   $confirmPassword = $_POST['confirmPassword'];
   $lastPage = $_POST['lastPage'];
+  $hashPassword = password_hash($password, PASSWORD_DEFAULT);
   
   // Checking if the user is already registered
   $emailExists = "SELECT * FROM `login_form` WHERE `email`= '$email'";
   $usernameExists = "SELECT * FROM `login_form` WHERE `username`= '$username'";
   $emailExists_Result = mysqli_query($con, $emailExists);
   $usernameExists_Result = mysqli_query($con, $usernameExists);
-  $hashPassword = password_hash($password, PASSWORD_DEFAULT);
 
   if ($password !== $confirmPassword) {
       $redirectURL = $lastPage . (strpos($lastPage, '?') !== false ? '&' : '?') . "signUp=false";

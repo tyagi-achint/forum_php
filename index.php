@@ -47,6 +47,12 @@ $con->close();
 
     <?php include 'partials/_signupAlert.php'; ?>
 
+    <!-- Reset Alert -->
+    <?php include 'partials/_resetPassAlert.php'; ?>
+    <!-- Login Alert -->
+    <?php include 'partials/_loginAlert.php'; ?>
+
+
 
 
 

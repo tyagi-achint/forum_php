@@ -5,6 +5,8 @@
 
 
 <body>
+    <?php include 'partials/_server.php'; ?>
+
     <!-- Navbar -->
     <?php include 'partials/_navbar.php'; ?>
 
