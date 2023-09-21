@@ -19,6 +19,8 @@ try{
         $_SESSION['name'] = $row['name'];
         $_SESSION['email'] = $row['email'];
         $_SESSION['username'] = $row['username'];
+        $_SESSION['usercode'] = $row['sno'];
+
     }else{
         $redirectURL = $lastPage . (strpos($lastPage, '?') !== false ? '&' : '?') . "login=false";
     header("Location: " . $redirectURL);

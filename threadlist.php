@@ -30,8 +30,13 @@ while ($row = mysqli_fetch_assoc($catResult)){
         $method = $_SERVER['REQUEST_METHOD'];
         if($method == 'POST') {
             $th_title = $_POST['threadTitle'];
+            $th_title = str_replace("<", "&lt",  $th_title);
+            $th_title = str_replace(">", "&gt",  $th_title);
+            $usercode = $_SESSION['usercode'];
             $th_description = $_POST['threadDescription'];
-            $th_sql = "INSERT INTO `threads` ( `title`, `description`, `cat_id`, `user_id`, `time`) VALUES ( '$th_title', '$th_description', '$catId', '0', CURRENT_TIMESTAMP);";
+            $th_description = str_replace("<", "&lt", $th_description);
+            $th_description = str_replace(">", "&gt", $th_description);
+            $th_sql = "INSERT INTO `threads` ( `title`, `description`, `cat_id`, `user_id`, `time`) VALUES ( '$th_title', '$th_description', '$catId', '$usercode', CURRENT_TIMESTAMP);";
             $th_Result = mysqli_query($con,$th_sql);
             if($th_Result){
         $showAlert = true;
@@ -65,17 +70,29 @@ while ($row = mysqli_fetch_assoc($catResult)){
                 questions / Remain respectful of other members at all times</p>
         </div>
         <!-- Thread Form -->
-
+        <?php 
+   
+    if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 'true'){
+echo'<div class="threadform">
+<h1>Start a Discussion</h1>
+<form action="'.$_SERVER['REQUEST_URI'] .'" method="post">
+    <label for="threadTitle">Problem Title</label>
+    <input type="text" id="threadTitle" name="threadTitle" required>
+    <label for="threadDescription">Ellaborate your Concern</label>
+    <input style="height: 30px;" id="threadDescription" type="text" name="threadDescription" required>
+    <button type="submit">Submit</button>
+</form>
+</div>';
+    }
+    else{
+        echo'
         <div class="threadform">
             <h1>Start a Discussion</h1>
-            <form action="<?php echo$_SERVER['REQUEST_URI'] ?>" method="post">
-                <label for="threadTitle">Problem Title</label>
-                <input type='text' id="threadTitle" name='threadTitle' required>
-                <label for="threadDescription">Ellaborate your Concern</label>
-                <input style="height: 30px;" id="threadDescription" type='text' name='threadDescription' required>
-                <button type='submit'>Submit</button>
-            </form>
-        </div>
+            <h4>You need to Login first!</h4>
+    </div>';
+    }
+    ?>
+
 
         <!-- Question -->
         <h1>Browse Questions</h1>

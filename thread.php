@@ -19,6 +19,22 @@
          
             $threadTitle = $row['title'];
             $threadDesc = $row['description'];
+            $threadBy=$row['user_id'];
+            $getThreadUser ="SELECT  `username` FROM `login_form` WHERE `sno` = '$threadBy';";
+            $getThreadUserResult = mysqli_query($con, $getThreadUser);
+if ($getThreadUserResult) {
+    $userData = mysqli_fetch_assoc($getThreadUserResult);
+    if ($userData) {
+        $username = $userData['username'];
+    
+    } else {
+        $username = 'Deleted User';
+    }
+} else {
+    $username = 'Deleted User';
+}
+
+
             
         }
         
@@ -32,7 +48,12 @@
         if($method == 'POST' &&isset($_POST['threadComment'])) {
             
             $Cmnt_comment = $_POST['threadComment'];
-            $Cmnt_sql = "INSERT INTO `comments` ( `comment`, `thread_id`, `user_id`, `time`) VALUES ( '$Cmnt_comment', '$threadId', '0', CURRENT_TIMESTAMP);";
+            $Cmnt_comment = str_replace("<", "&lt", $Cmnt_comment);
+            $Cmnt_comment = str_replace(">", "&gt", $Cmnt_comment);
+              
+            $usercode = $_SESSION['usercode'];
+
+            $Cmnt_sql = "INSERT INTO `comments` ( `comment`, `thread_id`, `user_id`, `time`) VALUES ( '$Cmnt_comment', '$threadId', '$usercode', CURRENT_TIMESTAMP);";
             $Cmnt_Result = mysqli_query($con,$Cmnt_sql);
             if($Cmnt_Result){
         $showAlert = true;
@@ -65,18 +86,33 @@
             <hr>
             <h3><?php echo $threadDesc ; ?></h3>
             <br>
-            <p>Posted by : <b>Achint </b>
+
+            <p>Posted by : <b><?php  echo $username;
+             ?> </b>
             </p>
         </div>
 
-        <div class="threadform">
-            <h1>Enter a Comment</h1>
-            <form action="<?php echo$_SERVER['REQUEST_URI'] ?>" method="post">
-                <label for="threadComment">Your Comment</label>
-                <textarea id="threadComment" type='text' rows="5" name='threadComment' required></textarea>
-                <button type='submit'>Submit</button>
-            </form>
-        </div>
+        <?php 
+   
+   if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 'true'){
+echo'<div class="threadform">
+<h1>Enter a Comment</h1>
+<form action="'.$_SERVER['REQUEST_URI'] .'" method="post">
+        <label for="threadComment">Your Comment</label>
+        <textarea id="threadComment" type="text" rows="5" name="threadComment" required></textarea>
+        <button type="submit">Submit</button>
+        </form>
+    </div>';
+    }
+    else{
+    echo'
+    <div class="threadform">
+        <h1>Enter a Comment</h1>
+        <h4>You need to Login first!</h4>
+    </div>';
+    }
+    ?>
+
 
 
         <h1>Comments</h1>
@@ -86,20 +122,40 @@
                 <?php
 $threadId =$_GET['id'];
         $commentssql = "SELECT  * FROM `comments` WHERE `thread_id` = '$threadId';";
+       
         $commentsResult = mysqli_query($con,$commentssql);
         $commentsNoResult = true;
+
+
         while ($row = mysqli_fetch_assoc($commentsResult)){
         $commentsNoResult = false;
             $commentsId = $row['id'];
             $comment = $row['comment'];
             $commentTime=$row['time'];
+            $commentBy=$row['user_id'];
+            $getUser ="SELECT  `username` FROM `login_form` WHERE `sno` = '$commentBy';";
+            $getUserResult = mysqli_query($con, $getUser);
+if ($getUserResult) {
+    $userData = mysqli_fetch_assoc($getUserResult);
+    if ($userData) {
+        $username = $userData['username'];
+    
+    } else {
+        $username = 'Deleted User';
+    }
+} else {
+    $username = 'Deleted User';
+}
+        
+     
+
             $formattedTime = date('jS F Y h:i A', strtotime($commentTime));
 
             echo "
                 <li class='media'>
                     <img src='images/logo.png' alt='Generic placeholder image'>
                     <div class='media-body' style='cursor: pointer;'>
-                        <h5 style='color: black;  font-weight: 900;'> User <span
+                        <h5 style='color: black;  font-weight: 900;'> $username <span
                                 style='font-size:.8rem ;font-weight: 600;'>($formattedTime)</span></h5>
                                 <div id='commentData'>
                                 <p class='commentVisible' style='color: grey;'> $comment </p>
