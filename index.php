@@ -13,12 +13,10 @@
     <?php include 'partials/_slideshow.php'; ?>
 
     <!-- Categories -->
-    <h1>Browse Categories</h1>
-    <div id="category">
+    <div style="margin-top:50px;" id="category">
         <div class="cards">
             <?php
-        
-$categorysql = "SELECT  * FROM `categories`;";
+$categorysql = "SELECT  * FROM `categories` LIMIT 4;";
 $categoryResult = mysqli_query($con,$categorysql);
 while ($row = mysqli_fetch_assoc($categoryResult)){
     $categoryId = $row['id'];
