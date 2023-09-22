@@ -2,7 +2,7 @@
 
 $server="localhost";
 $username="root";
-$password="Joker.321@";
+$password="";
 $database ="crowd_canvass";
 
 
