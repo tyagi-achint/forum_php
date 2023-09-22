@@ -4,9 +4,7 @@
 <?php include 'partials/_head.php'; ?>
 <?php include 'partials/_server.php'; ?>
 
-<style>
 
-</style>
 
 <body>
     <!-- Navbar -->

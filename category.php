@@ -29,7 +29,7 @@
             echo"
             <div id='threadAlert'>
             <span id='closeAlert'>&times;</span>
-            <p><b>Success! </b>Your request has been send! Please wait for community to check it. </p>
+            <p><b>Success! </b>Your request has been sent! Please wait for community to check it. </p>
         </div>";
         }
         echo"<script>
