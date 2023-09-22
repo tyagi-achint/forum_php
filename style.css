@@ -568,6 +568,102 @@ footer a {
   color: #ddd !important;
   text-decoration: underline !important;
 }
+
+/* About Page */
+
+
+#about-page {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#about-page header,
+#about-page #team {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+#about-page header h1 {
+  margin-left: 0;
+  color: #333;
+}
+
+#about-page header p {
+  color: #666;
+  margin: 10px 0;
+}
+
+#about-page section {
+  margin: 30px 0;
+}
+
+#about-page section p {
+  font-size: 1.18rem;
+  margin: 20px 0;
+
+}
+
+#about-page h2 {
+  color: #333;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+#about-page ul {
+  margin-left: 20px;
+}
+
+#about-page ul li {
+  margin-bottom: 10px;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 1.08rem;
+  list-style: disc;
+
+}
+
+#about-page .teamMedia {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+}
+
+#about-page .teamMedia img {
+  border-radius: 10px;
+  border: 1px solid grey;
+  max-width: 200px;
+  margin-right: 20px;
+}
+
+#about-page .teamMedia-body {
+  flex: 1;
+}
+
+#about-page .teamMedia-body h1 {
+  font-family: cursive;
+  margin: 0 0 10px;
+  font-size: 2em;
+  font-weight: 900;
+}
+
+#about-page .teamMedia-body a {
+  color: black;
+}
+
+#about-page .social a {
+  margin-right: 10px;
+
+}
+
+#about-page .social img {
+  margin-top: 10px;
+
+  width: 24px;
+  height: 24px;
+}
+
 /* Animation */
 @keyframes colourchange {
 

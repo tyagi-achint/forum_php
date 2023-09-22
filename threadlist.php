@@ -111,7 +111,7 @@ $threadNoResult = false;
     $threadDesc = $row['description'];
     
     echo "<li class='media'>
-    <img src='images/logo.png' alt='Generic placeholder image'>
+    <img src='images/user-" . rand(1, 13) . ".jpg' alt='Generic placeholder image'>
     <div class='media-body'><a href='thread.php?id=$threadId'>
   <h5 style='color: black;'> $threadTitle</h5>
   
