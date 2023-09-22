@@ -10,6 +10,7 @@ ul {
 
 body {
   font-family: Arial, sans-serif;
+  background-color: #f1f6f9b7;
 }
 p{
   font-family: 'EB Garamond', serif;
@@ -659,9 +660,10 @@ footer a {
 
 #about-page .social img {
   margin-top: 10px;
-
-  width: 24px;
-  height: 24px;
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 0;
 }
 
 /* Animation */
