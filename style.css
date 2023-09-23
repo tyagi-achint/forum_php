@@ -286,7 +286,7 @@ height: 70vh;
 
 .loginSignup input {
   font-weight: bolder;
-  width: 30vw;
+  width: 25vw;
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
@@ -460,7 +460,7 @@ background-color:#838788 !important ;
 
 .threadform input,.threadform textarea{
   font-weight: bolder;
-  width: 30vw;
+  width: 33vw;
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
