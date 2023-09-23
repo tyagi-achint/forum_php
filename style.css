@@ -286,7 +286,7 @@ height: 70vh;
 
 .loginSignup input {
   font-weight: bolder;
-  width: 25vw;
+  width: 25vw !important;
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
@@ -460,7 +460,7 @@ background-color:#838788 !important ;
 
 .threadform input,.threadform textarea{
   font-weight: bolder;
-  width: 33vw;
+  width: 33vw !important;
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
@@ -717,7 +717,7 @@ nav .navigation2 {
         flex: 0 1 28% ; 
     }
     #about-page .teamMedia {
-      display: inherit;
+      display: inherit !important;
       width: 60%;
    
     }
@@ -741,7 +741,7 @@ nav .navigation2 {
   flex: 0 1 40% ; 
       }
       #about-page .teamMedia {
-        display: inherit;
+        display: inherit !important;
         width: 60%;
      
       }
@@ -765,7 +765,7 @@ nav .navigation2 {
   flex: 0 1 70% ; 
       }
       #about-page .teamMedia {
-        display: inherit;
+        display: inherit !important;
         width: 60%;
      
       }
