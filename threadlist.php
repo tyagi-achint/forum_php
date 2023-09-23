@@ -145,7 +145,12 @@ if ($threadNoResult){
     <!-- Footer -->
     <?php include 'partials/_footer.php'; ?>
 
-
+    <!-- SignUp Alert -->
+    <?php include 'partials/_signupAlert.php'; ?>
+    <!-- Reset Alert -->
+    <?php include 'partials/_resetPassAlert.php'; ?>
+    <!-- Login Alert -->
+    <?php include 'partials/_loginAlert.php'; ?>
 
 </body>
 
