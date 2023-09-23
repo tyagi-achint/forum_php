@@ -716,6 +716,14 @@ nav .navigation2 {
 
         flex: 0 1 28% ; 
     }
+    #about-page .teamMedia {
+      display: inherit;
+      width: 60%;
+   
+    }
+    .loginSignup button[type="submit"] {
+      margin-right: 0;
+  }
 }
 
 /* Screen max-width: 880px */
@@ -732,6 +740,14 @@ nav .navigation2 {
   width: 280px;
   flex: 0 1 40% ; 
       }
+      #about-page .teamMedia {
+        display: inherit;
+        width: 60%;
+     
+      }
+      .loginSignup button[type="submit"] {
+        margin-right: 0;
+    }
 
 }
 /* Screen max-width: 480px */
@@ -748,6 +764,14 @@ nav .navigation2 {
   width: 280px;
   flex: 0 1 70% ; 
       }
+      #about-page .teamMedia {
+        display: inherit;
+        width: 60%;
+     
+      }
+      .loginSignup button[type="submit"] {
+        margin-right: 0;
+    }
 
 }
 

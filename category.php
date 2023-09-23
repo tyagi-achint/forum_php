@@ -80,14 +80,15 @@ while ($row = mysqli_fetch_assoc($categoryResult)){
     $categoryName = $row['name'];
     $categoryDesc = $row['description'];
     $searchCategoryName = str_replace(' ', '', $categoryName);
-    echo"<div class='card' style='background-image: url(https://source.unsplash.com/500x400/?programming,$searchCategoryName);'>
+    echo"<div class='card' style='background-image: url(https://source.unsplash.com/500x400/?programming,$searchCategoryName);'><a href='threadlist.php?id=$categoryId'>
+    <div class='cardData'>
         <h3> $categoryName </h3>
         <p> " . substr($categoryDesc,0,150) . "... </p>
-        <button><a href='threadlist.php?id=$categoryId'>View</a></button>
-    </div>
+        <button>View</button>
+    </div></a>
 </div>";
 }
-$con->close();
+
 ?>
         </div>
     </div>

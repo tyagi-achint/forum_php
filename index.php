@@ -31,7 +31,7 @@ while ($row = mysqli_fetch_assoc($categoryResult)){
     </div></a>
 </div>";
 }
-$con->close();
+
 ?>
         </div>
     </div>
