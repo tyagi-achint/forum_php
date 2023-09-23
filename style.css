@@ -628,7 +628,7 @@ footer a {
 }
 
 #about-page .teamMedia {
-  display: flex;
+  display: flex !important;
   align-items: center;
   width: 50%;
   margin: auto;
