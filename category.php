@@ -61,7 +61,7 @@ echo'<div class="threadform">
 </div>';
    }else{
         echo' 
-        <div class="threadform">
+        <div style="margin-bottom:37vh;" class="threadform">
             <h4>You need to Login first!</h4>
     </div>';}
     
@@ -79,8 +79,8 @@ while ($row = mysqli_fetch_assoc($categoryResult)){
     $categoryId = $row['id'];
     $categoryName = $row['name'];
     $categoryDesc = $row['description'];
-    echo"<div class='card' style='background-image: url(https://source.unsplash.com/500x400/?$categoryName,programming);'>
-    <div class='cardData'>
+    $searchCategoryName = str_replace(' ', '', $categoryName);
+    echo"<div class='card' style='background-image: url(https://source.unsplash.com/500x400/?programming,$searchCategoryName);'>
         <h3> $categoryName </h3>
         <p> " . substr($categoryDesc,0,150) . "... </p>
         <button><a href='threadlist.php?id=$categoryId'>View</a></button>

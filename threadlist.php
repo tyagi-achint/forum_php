@@ -86,7 +86,7 @@ echo'<div class="threadform">
     }
     else{
         echo'
-        <div class="threadform">
+        <div style="margin-bottom:37vh;" class="threadform">
             <h1>Start a Discussion</h1>
             <h4>You need to Login first!</h4>
     </div>';

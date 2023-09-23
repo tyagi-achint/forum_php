@@ -16,13 +16,14 @@
     <div style="margin-top:50px;" id="category">
         <div class="cards">
             <?php
-$categorysql = "SELECT  * FROM `categories` LIMIT 4;";
+$categorysql = "SELECT  * FROM `categories` LIMIT 5;";
 $categoryResult = mysqli_query($con,$categorysql);
 while ($row = mysqli_fetch_assoc($categoryResult)){
     $categoryId = $row['id'];
     $categoryName = $row['name'];
     $categoryDesc = $row['description'];
-    echo"<div class='card' style='background-image: url(https://source.unsplash.com/500x400/?$categoryName,programming);'>
+    $searchCategoryName = str_replace(' ', '', $categoryName);
+    echo"<div class='card' style='background-image: url(https://source.unsplash.com/500x400/?programming,$searchCategoryName);'>
     <div class='cardData'>
         <h3> $categoryName </h3>
         <p> " . substr($categoryDesc,0,150) . "... </p>
