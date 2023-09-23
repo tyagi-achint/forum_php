@@ -118,6 +118,7 @@ nav .navigation1 li {
 
 .card:hover button {
   display: initial;
+
 }
 
 .cardData {
@@ -146,18 +147,19 @@ nav .navigation1 li {
   text-align: left;
 }
 
-.cards button a {
+.cards button  {
   color: #393E46;
 
 }
 
 .cards button:hover {
   background-color: #393E46 !important;
+  color: #F1EFEF !important; 
+
+
 }
 
-.cards button:hover a {
-  color: #F1EFEF;
-} 
+
 
 /* SlideShow */
 
@@ -284,7 +286,7 @@ nav .navigation1 li {
 
 .loginSignup input {
   font-weight: bolder;
-  width: 95%;
+  width: 25vw;
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
@@ -312,6 +314,7 @@ background-color:#838788 !important ;
   border: 0;
   padding: 10px;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .loginSignup .bottomContainer {
@@ -457,7 +460,7 @@ background-color:#838788 !important ;
 
 .threadform input,.threadform textarea{
   font-weight: bolder;
-  width: 95%;
+  width: 25vw;
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
