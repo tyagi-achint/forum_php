@@ -458,7 +458,7 @@ background-color:#838788 !important ;
   font-size: large;
 }
 
-.threadform input,.threadform textarea{
+.threadform input,.threadform {
   font-weight: bolder;
   width: 33vw !important;
   padding: 10px;
@@ -468,7 +468,9 @@ background-color:#838788 !important ;
   font-size: 16px;
   color: rgb(60, 58, 55);
 }
-
+textarea {
+  resize: vertical !important;
+}
 
 .threadform input:focus,.threadform textarea:focus {
   outline: none;
