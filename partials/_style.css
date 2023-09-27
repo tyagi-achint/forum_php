@@ -274,6 +274,7 @@ height: 70vh;
 
 .loginSignup form {
   background-color: #fefefe;
+  text-align: center;
 
   border: 1px solid #ccc;
   padding: 2%;
@@ -334,7 +335,8 @@ background-color:#838788 !important ;
 
 .loginSignup .bottomContainer p {
   margin: 5px !important;
-  font-family: cursive;
+  font-family: 'Neucha', cursive;
+  letter-spacing: 1.2px;
 }
 
 .loginSignup .messagecontainer {
@@ -444,6 +446,8 @@ background-color:#838788 !important ;
 }
 
 .threadform form {
+  text-align: center;
+
   border: 1px solid #ccc;
   padding: 2%;
   border-radius: 5px;
@@ -458,7 +462,7 @@ background-color:#838788 !important ;
   font-size: large;
 }
 
-.threadform input,.threadform {
+.threadform input,.threadform textarea{
   font-weight: bolder;
   width: 33vw !important;
   padding: 10px;
@@ -467,8 +471,9 @@ background-color:#838788 !important ;
   border-radius: 5px;
   font-size: 16px;
   color: rgb(60, 58, 55);
-}
-textarea {
+} 
+
+.threadform textarea {
   resize: vertical !important;
 }
 
@@ -622,9 +627,10 @@ footer a {
 
 #about-page ul li {
   margin-bottom: 10px;
-  font-family: cursive;
+  font-family: 'Neucha', cursive;
+  letter-spacing: 1.2px;
   font-weight: bold;
-  font-size: 1.08rem;
+  font-size: 1.2rem;
   list-style: disc;
 
 }
@@ -648,9 +654,10 @@ footer a {
 }
 
 #about-page .teamMedia-body h1 {
-  font-family: cursive;
+  font-family: 'Neucha', cursive;
   margin: 0 0 10px;
   font-size: 2em;
+  letter-spacing: 1.2px;
   font-weight: 900;
 }
 
@@ -718,14 +725,8 @@ nav .navigation2 {
 
         flex: 0 1 28% ; 
     }
-    #about-page .teamMedia {
-      display: inherit !important;
-      width: 60%;
    
-    }
-    .loginSignup button[type="submit"] {
-      margin-right: 0;
-  }
+   
 }
 
 /* Screen max-width: 880px */

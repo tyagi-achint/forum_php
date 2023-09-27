@@ -11,7 +11,6 @@
                     <input type='email' name='email' placeholder='Email' required>
                     <input type='password' name='password' placeholder='Password' required>
                     <input type='password' name='confirmPassword' placeholder='Confirm Password' required>
-
                     <input type='text' name='dob' pattern='\d{4}-\d{2}-\d{2}' placeholder='Date of Birth (yyyy-mm-dd)'
                         required>
                     <div style='text-align: center;'>

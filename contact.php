@@ -52,24 +52,17 @@
         <div class="jumbotron">
             <h1>Want to connect?</h1>
             <hr>
-            <?php 
-   if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 'true'){
-echo'<div class="threadform">
-<form action="'.$_SERVER['REQUEST_URI'] .'" method="post">
-<input type="text" name="contactName" placeholder="Name" required>
-<input type="email" name="contactEmail" placeholder="Email" required>
-<input type="text" name="contactTitle" placeholder="Title" required>
-<textarea  type="text" rows="5" name="contactDescription" placeholder="Description" required></textarea>
-<button type="submit">Submit</button>
-</form>
-</div>';
-   }else{
-        echo' 
-        <div style="margin-bottom:37vh;" class="threadform">
-            <h4>You need to Login first!</h4>
-    </div>';}
-    
-    ?>
+            <div class="threadform">
+                <form action="'.$_SERVER['REQUEST_URI'] .'" method="post">
+                    <input type="text" name="contactName" placeholder="Name" required>
+                    <input type="email" name="contactEmail" placeholder="Email" required>
+                    <input type="text" name="contactTitle" placeholder="Title" required>
+                    <textarea type="text" rows="5" name="contactDescription" placeholder="Description"
+                        required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
         </div>
     </div>
 
