@@ -9,6 +9,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $confirmPassword = $_POST['confirmPassword'];
   $lastPage = $_POST['lastPage'];
   $hashPassword = password_hash($password, PASSWORD_DEFAULT);
+  date_default_timezone_set('Asia/Kolkata');
+            $currentTime=date('jS F Y h:i A');
   
   // Checking if the user is already registered
   $emailExists = "SELECT * FROM `login_form` WHERE `email`= '$email'";
@@ -27,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   } else {
       try {
           $sql = "INSERT INTO `login_form` ( `name`, `username`, `email`, `password`, `dob`, `time`) VALUES
-          ('$name', '$username', '$email', '$hashPassword', '$dob', CURRENT_TIMESTAMP);";
+          ('$name', '$username', '$email', '$hashPassword', '$dob', '$currentTime');";
           $sql_Result = mysqli_query($con, $sql);
           if ($sql_Result) {
               $redirectURL = $lastPage . (strpos($lastPage, '?') !== false ? '&' : '?') . "signUp=true";

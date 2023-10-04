@@ -21,7 +21,9 @@
             $cat_description = $_POST['categoryDescription'];
             $cat_description = str_replace("<", "&lt", $cat_description);
             $cat_description = str_replace(">", "&gt", $cat_description);
-            $cat_sql = "INSERT INTO `cat_request` ( `title`, `description`,  `user_id`, `time`) VALUES ( '$cat_title', '$cat_description',  '$usercode', CURRENT_TIMESTAMP);";
+            date_default_timezone_set('Asia/Kolkata');
+            $currentTime=date('jS F Y h:i A');
+            $cat_sql = "INSERT INTO `cat_request` ( `title`, `description`,  `user_id`, `time`) VALUES ( '$cat_title', '$cat_description',  '$usercode', '$currentTime');";
             $cat_Result = mysqli_query($con,$cat_sql);
             if($cat_Result){
         $showAlert = true;

@@ -493,6 +493,7 @@ background-color:#838788 !important ;
   min-width: 35%;
   padding: 10px;
   cursor: pointer;
+  margin: 0 10vw;
   color: #525454;
   background-color: white !important;
 }

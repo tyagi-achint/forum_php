@@ -36,7 +36,9 @@ while ($row = mysqli_fetch_assoc($catResult)){
             $th_description = $_POST['threadDescription'];
             $th_description = str_replace("<", "&lt", $th_description);
             $th_description = str_replace(">", "&gt", $th_description);
-            $th_sql = "INSERT INTO `threads` ( `title`, `description`, `cat_id`, `user_id`, `time`) VALUES ( '$th_title', '$th_description', '$catId', '$usercode', CURRENT_TIMESTAMP);";
+            date_default_timezone_set('Asia/Kolkata');
+            $currentTime=date('jS F Y h:i A');
+            $th_sql = "INSERT INTO `threads` ( `title`, `description`, `cat_id`, `user_id`, `time`) VALUES ( '$th_title', '$th_description', '$catId', '$usercode', '$currentTime');";
             $th_Result = mysqli_query($con,$th_sql);
             if($th_Result){
         $showAlert = true;
@@ -137,7 +139,7 @@ if ($threadNoResult){
     </div>
 
 
-    <!-- Comment Modal -->
+
 
 
 

@@ -52,8 +52,10 @@ if ($getThreadUserResult) {
             $Cmnt_comment = str_replace(">", "&gt", $Cmnt_comment);
               
             $usercode = $_SESSION['usercode'];
+            date_default_timezone_set('Asia/Kolkata');
+            $currentTime=date('jS F Y h:i A');
 
-            $Cmnt_sql = "INSERT INTO `comments` ( `comment`, `thread_id`, `user_id`, `time`) VALUES ( '$Cmnt_comment', '$threadId', '$usercode', CURRENT_TIMESTAMP);";
+            $Cmnt_sql = "INSERT INTO `comments` ( `comment`, `thread_id`, `user_id`, `time`) VALUES ( '$Cmnt_comment', '$threadId', '$usercode', '$currentTime');";
             $Cmnt_Result = mysqli_query($con,$Cmnt_sql);
             if($Cmnt_Result){
         $showAlert = true;
@@ -149,14 +151,14 @@ if ($getUserResult) {
         
      
 
-            $formattedTime = date('jS F Y h:i A', strtotime($commentTime));
+           
 
             echo "
                 <li class='media'>
                     <img src='images/logo.png' alt='Generic placeholder image'>
                     <div class='media-body' style='cursor: pointer;'>
                         <h5 style='color: black;  font-weight: 900;'> $username <span
-                                style='font-size:.8rem ;font-weight: 600;'>($formattedTime)</span></h5>
+                                style='font-size:.8rem ;font-weight: 600;'>($commentTime)</span></h5>
                                 <div id='commentData'>
                                 <p class='commentVisible' style='color: grey;'> $comment </p>
         </div>

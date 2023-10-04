@@ -24,7 +24,9 @@
             $usercode = $_SESSION['usercode'];
             $contact_description = str_replace("<", "&lt", $contact_description);
             $contact_description = str_replace(">", "&gt", $contact_description);
-            $contact_sql = "INSERT INTO `contact_request` (`name`, `email`, `title`, `description`, `user_id`, `time`) VALUES (' $contact_name', ' $contact_email', ' $contact_title', ' $contact_description', '$usercode', CURRENT_TIMESTAMP);";
+            date_default_timezone_set('Asia/Kolkata');
+            $currentTime=date('jS F Y h:i A');
+            $contact_sql = "INSERT INTO `contact_request` (`name`, `email`, `title`, `description`, `user_id`, `time`) VALUES (' $contact_name', ' $contact_email', ' $contact_title', ' $contact_description', '$usercode', '$currentTime');";
             $contact_Result = mysqli_query($con,$contact_sql);
             if($contact_Result){
         $showAlert = true;
