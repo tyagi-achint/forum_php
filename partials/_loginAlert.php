@@ -1,23 +1,25 @@
 <?php
 if (isset($_GET['login']) && $_GET['login'] === 'false') {
-    echo "
-    <div id='LoginAlert' class='AlertLoginSignup'>
-    <span id='Loginclose' class='Alertclosebutton'>&times;</span>
-    <p><b>Failed!  </b>Details does not match or not exist. Please try again. </p>
+    ?>
+<div id='LoginAlert' class='AlertLoginSignup'>
+    <div
+        style="width:50%;height: 10vh;margin:auto;position: relative;background: #D83F31;border-radius: 10px; display: flex;align-items: center;justify-content: center;">
+        <span id='Loginclose' class='Alertclosebutton'>&times;</span>
+        <p><b>Failed! </b>Details do not match or do not exist. Please try again.</p>
+    </div>
 </div>
 <script>
-        let LoginAlert = document.getElementById('LoginAlert');
-        let Loginclose = document.getElementById('Loginclose');
-        Loginclose.onclick = function() {
-            LoginAlert.style.display = 'none';
-        }
-            document.addEventListener('DOMContentLoaded', function() {
-                var signupmodal = document.getElementById('loginModal');
-                signupmodal.style.display = 'block';
-            });
-          </script>";
+setTimeout(function() {
+    window.location.href = '/Xampp_files/Php/forum_php/index.php';
+}, 3000);
+document.addEventListener('DOMContentLoaded', function() {
+    let LoginAlert = document.getElementById('LoginAlert');
+    let Loginclose = document.getElementById('Loginclose');
+    Loginclose.onclick = function() {
+        window.location.href = '/Xampp_files/Php/forum_php/index.php';
+    };
+});
+</script>
+<?php
 }
-
-
-
 ?>

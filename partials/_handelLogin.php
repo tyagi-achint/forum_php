@@ -4,8 +4,6 @@ include '_server.php';
 $username = $_POST['username'];
 $password = $_POST['password'];
 $lastPage = $_POST['lastPage'];
-
-
 $login_sql = "SELECT * FROM `login_form` WHERE `username` = '$username';";
 $login_Result = mysqli_query($con, $login_sql);
 $login_rows = mysqli_num_rows($login_Result);
@@ -22,23 +20,22 @@ try{
         $_SESSION['usercode'] = $row['sno'];
 
     }else{
-        $redirectURL = $lastPage . (strpos($lastPage, '?') !== false ? '&' : '?') . "login=false";
+        $redirectURL = $lastPage . "?login=false";
     header("Location: " . $redirectURL);
     exit; 
     }
-    header("Location:/files/Php/forum_php/index.php ");
+    header("Location:/Xampp_files/Php/forum_php/index.php");
 }
 catch (mysqli_sql_exception) {
-    $redirectURL = $lastPage . (strpos($lastPage, '?') !== false ? '&' : '?') . "login=false";
+    $redirectURL = $lastPage . "?login=false";
     header("Location: " . $redirectURL);
     exit; 
 }
 }
 else{
-    $redirectURL = $lastPage . (strpos($lastPage, '?') !== false ? '&' : '?') . "login=false";
+    $redirectURL = $lastPage . "?login=false";
               header("Location: " . $redirectURL);
               exit; 
 }
 }
-
 ?>

@@ -12,16 +12,17 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f1f6f9b7;
 }
-p{
-  font-family: 'EB Garamond', serif;
+p {
+  font-family: "EB Garamond", serif;
 }
-h3,h1{
-  font-family:  sans-serif;
+h3,
+h1 {
+  font-family: sans-serif;
 }
-h1{
+h1 {
   font-weight: 800;
   text-align: left;
-  margin:20px  10px 30px 20px;
+  margin: 20px 10px 30px 20px;
 }
 button {
   font-weight: bolder;
@@ -31,14 +32,14 @@ button {
   background: transparent !important;
   cursor: pointer;
   font-size: large;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 /* Navbar */
 
 nav {
   padding: 10px 20px;
   background-color: #333;
-text-align: center;
+  text-align: center;
 }
 
 nav a {
@@ -52,10 +53,9 @@ nav img {
   width: 120px;
 }
 
-nav button  {
+nav button {
   border: 1px solid #ffffff;
-  color: #ffffff ;
-  
+  color: #ffffff;
 }
 
 nav button:hover {
@@ -63,28 +63,23 @@ nav button:hover {
   background: #ffffff !important;
 }
 
-nav #userlogin{
+nav #userlogin {
   font-weight: bolder;
   border-bottom: 2px solid #ffffff;
-  color: #ffffff ;
+  color: #ffffff;
 
   padding: 7px 12px 0;
   font-size: large;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
-
 nav .navigation1,
-nav .navigation2 
-{
+nav .navigation2 {
   padding: 10px;
-
 }
 
 nav .navigation1 li {
- 
-  font-family: 'Croissant One', cursive;
-
+  font-family: "Croissant One", cursive;
 }
 /* Category */
 #category {
@@ -93,7 +88,6 @@ nav .navigation1 li {
   align-items: center;
 }
 
-
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -101,30 +95,27 @@ nav .navigation1 li {
 }
 
 .card {
-  
   border-radius: 28px;
   height: 350px;
   position: relative;
   margin: 10px;
   margin-bottom: 40px;
-  box-shadow: 0px 0px 20px 5px #A8A196;
+  box-shadow: 0px 0px 20px 5px #a8a196;
 }
 
 .card:hover .cardData {
   top: 0;
   border-radius: 0 0 90px 90px;
-
 }
 
 .card:hover button {
   display: initial;
-
 }
 
 .cardData {
   position: absolute;
   bottom: 0;
-  background-color: #B4B4B3;
+  background-color: #b4b4b3;
   height: 180px;
   border-radius: 90px 90px 0 0;
   padding: 20px 30px;
@@ -133,33 +124,28 @@ nav .navigation1 li {
 
 .cards h3 {
   margin-bottom: 10px;
-  color: #393E46;
+  color: #393e46;
 }
 
 .cards button {
   display: none;
   margin-top: 20px;
-  border: 1px solid #393E46;
+  border: 1px solid #393e46;
 }
 
 .cards p {
-  color: #F1EFEF;
+  color: #f1efef;
   text-align: left;
 }
 
-.cards button  {
-  color: #393E46;
-
+.cards button {
+  color: #393e46;
 }
 
 .cards button:hover {
-  background-color: #393E46 !important;
-  color: #F1EFEF !important; 
-
-
+  background-color: #393e46 !important;
+  color: #f1efef !important;
 }
-
-
 
 /* SlideShow */
 
@@ -173,10 +159,9 @@ nav .navigation1 li {
 }
 
 .slideshow-container img {
-height: 70vh;
+  height: 70vh;
   width: 100%;
 }
-
 
 .slideshow-container .prev,
 .slideshow-container .next {
@@ -203,7 +188,6 @@ height: 70vh;
 .slideshow-container .next:hover {
   background-color: white;
   color: black;
-
 }
 
 .slideshow-container .dotBox {
@@ -216,7 +200,7 @@ height: 70vh;
   height: 5px;
   width: 20px;
   margin: 0 2px;
-  background-color: #B4B4B3;
+  background-color: #b4b4b3;
   border-radius: 10%;
   display: inline-block;
   transition: background-color 0.3s ease;
@@ -245,7 +229,7 @@ height: 70vh;
 .modal-content {
   position: relative;
   /* background-color: #fefefe; */
-  background-color: #F1EFEF;
+  background-color: #f1efef;
   align-items: center;
   margin: auto;
   padding: 20px;
@@ -283,8 +267,6 @@ height: 70vh;
   width: 40%;
 }
 
-
-
 .loginSignup input {
   font-weight: bolder;
   width: 25vw !important;
@@ -306,7 +288,7 @@ height: 70vh;
 
 .loginSignup button {
   color: white;
-background-color:#838788 !important ;
+  background-color: #838788 !important ;
   font-size: 20px;
   font-weight: bolder;
   outline: 0;
@@ -335,7 +317,7 @@ background-color:#838788 !important ;
 
 .loginSignup .bottomContainer p {
   margin: 5px !important;
-  font-family: 'Neucha', cursive;
+  font-family: "Neucha", cursive;
   letter-spacing: 1.2px;
 }
 
@@ -348,7 +330,6 @@ background-color:#838788 !important ;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 30%;
 }
-
 
 .loginSignup h2 {
   margin-bottom: 10px;
@@ -374,9 +355,8 @@ background-color:#838788 !important ;
 }
 
 .jumbotron {
-
   padding: 20px;
-  background-color: #F1EFEF;
+  background-color: #f1efef;
 }
 
 .jumbotron h1 {
@@ -405,19 +385,17 @@ background-color:#838788 !important ;
 }
 
 .questionList {
-  border: 2px solid #F1EFEF;
+  border: 2px solid #f1efef;
   padding: 20px;
 }
 
 .questionList .media {
   display: flex;
-
 }
 
 .questionList .media h5 {
   margin: 0 10px 5px 0;
   font-size: 1.25rem;
-
 }
 
 .questionList .media img {
@@ -437,12 +415,11 @@ background-color:#838788 !important ;
 .threadform h1 {
   margin-left: 0;
   margin-bottom: 0;
-
 }
 
 .threadform {
   margin-top: 20px;
-  padding: 0 0 20px ;
+  padding: 0 0 20px;
 }
 
 .threadform form {
@@ -452,7 +429,6 @@ background-color:#838788 !important ;
   padding: 2%;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  
 }
 
 .threadform label {
@@ -462,7 +438,8 @@ background-color:#838788 !important ;
   font-size: large;
 }
 
-.threadform input,.threadform textarea{
+.threadform input,
+.threadform textarea {
   font-weight: bolder;
   width: 33vw !important;
   padding: 10px;
@@ -471,17 +448,17 @@ background-color:#838788 !important ;
   border-radius: 5px;
   font-size: 16px;
   color: rgb(60, 58, 55);
-} 
+}
 
 .threadform textarea {
   resize: vertical !important;
 }
 
-.threadform input:focus,.threadform textarea:focus {
+.threadform input:focus,
+.threadform textarea:focus {
   outline: none;
   border: 2px solid #a2a5a6;
   box-shadow: 0 0 10px #a2a5a6;
-
 }
 
 .threadform button {
@@ -497,16 +474,15 @@ background-color:#838788 !important ;
   color: #525454;
   background-color: white !important;
 }
-.threadform button:hover{
+.threadform button:hover {
   border: 1px solid #838788;
 
   color: white;
-background-color:#838788 !important ;
-
+  background-color: #838788 !important ;
 }
 
 #threadAlert {
-  background-color: #C3EDC0;
+  background-color: #c3edc0;
   margin: auto;
   padding: 8px 10px;
   position: relative;
@@ -533,34 +509,36 @@ background-color:#838788 !important ;
   max-height: 50vh;
 }
 #commentData::-webkit-scrollbar {
-  width: 10px
+  width: 10px;
 }
 #commentData::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
-  border-radius:30px ;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 30px;
 }
 #commentData::-webkit-scrollbar-thumb {
-  background: grey; 
+  background: grey;
   border-radius: 30px;
 }
 
 /* LoginSignup Alert */
 .AlertLoginSignup {
-  background-color: #D83F31;
+  background-color: #000000cd;
   margin: auto;
-  padding: 8px 10px;
+  padding: 0;
   position: fixed;
   top: 0;
   z-index: 2;
-  text-align: center;
   width: 100%;
-  height: 22px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .Alertclosebutton {
   position: absolute;
   top: 0;
-  right: 5%;
+  right: 0;
   color: #2e2e2e;
   float: right;
   font-size: 30px;
@@ -574,7 +552,6 @@ footer {
   color: #838788;
   padding: 10px;
   margin-top: 10px;
-
 }
 footer a {
   color: #ddd !important;
@@ -582,7 +559,6 @@ footer a {
 }
 
 /* About Page */
-
 
 #about-page {
   max-width: 80%;
@@ -613,7 +589,6 @@ footer a {
 #about-page section p {
   font-size: 1.18rem;
   margin: 20px 0;
-
 }
 
 #about-page h2 {
@@ -628,12 +603,11 @@ footer a {
 
 #about-page ul li {
   margin-bottom: 10px;
-  font-family: 'Neucha', cursive;
+  font-family: "Neucha", cursive;
   letter-spacing: 1.2px;
   font-weight: bold;
   font-size: 1.2rem;
   list-style: disc;
-
 }
 
 #about-page .teamMedia {
@@ -655,7 +629,7 @@ footer a {
 }
 
 #about-page .teamMedia-body h1 {
-  font-family: 'Neucha', cursive;
+  font-family: "Neucha", cursive;
   margin: 0 0 10px;
   font-size: 2em;
   letter-spacing: 1.2px;
@@ -668,7 +642,6 @@ footer a {
 
 #about-page .social a {
   margin-right: 10px;
-
 }
 
 #about-page .social img {
@@ -681,17 +654,14 @@ footer a {
 
 /* Animation */
 @keyframes colourchange {
-
   0%,
   50% {
-      color: #ECE6DB;
-
+    color: #ece6db;
   }
 
   25%,
   100% {
-      color: #ccc;
-
+    color: #ccc;
   }
 }
 
@@ -708,75 +678,63 @@ footer a {
     margin-left: 10px;
   }
   nav .navigation1 li {
-   margin-left: 35px;
-   font-family: 'Croissant One', cursive;
- 
- }
- nav .navigation1 a:hover {
-  animation: colourchange 1s infinite;
-}
+    margin-left: 35px;
+    font-family: "Croissant One", cursive;
+  }
+  nav .navigation1 a:hover {
+    animation: colourchange 1s infinite;
+  }
 
-nav .navigation2 {
-  float: right;
-}
+  nav .navigation2 {
+    float: right;
+  }
 
-#category .card {
-  
-  width: 280px;
+  #category .card {
+    width: 280px;
 
-        flex: 0 1 28% ; 
-    }
-   
-   
+    flex: 0 1 28%;
+  }
 }
 
 /* Screen max-width: 880px */
 
 @media only screen and (max-width: 880px) {
   nav {
-    padding: 20px ;
-
+    padding: 20px;
   }
-  nav li{
+  nav li {
     margin-top: 10px;
   }
   #category .card {
-  width: 280px;
-  flex: 0 1 40% ; 
-      }
-      #about-page .teamMedia {
-        display: inherit !important;
-        width: 60%;
-     
-      }
-      .loginSignup button[type="submit"] {
-        margin-right: 0;
-    }
-
+    width: 280px;
+    flex: 0 1 40%;
+  }
+  #about-page .teamMedia {
+    display: inherit !important;
+    width: 60%;
+  }
+  .loginSignup button[type="submit"] {
+    margin-right: 0;
+  }
 }
 /* Screen max-width: 480px */
 
 @media only screen and (max-width: 480px) {
   nav {
-    padding: 20px ;
-
+    padding: 20px;
   }
-  nav li{
+  nav li {
     margin-top: 10px;
   }
   #category .card {
-  width: 280px;
-  flex: 0 1 70% ; 
-      }
-      #about-page .teamMedia {
-        display: inherit !important;
-        width: 60%;
-     
-      }
-      .loginSignup button[type="submit"] {
-        margin-right: 0;
-    }
-
+    width: 280px;
+    flex: 0 1 70%;
+  }
+  #about-page .teamMedia {
+    display: inherit !important;
+    width: 60%;
+  }
+  .loginSignup button[type="submit"] {
+    margin-right: 0;
+  }
 }
-
-

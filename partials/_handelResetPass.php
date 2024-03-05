@@ -15,12 +15,12 @@ $hashPassword = password_hash($password, PASSWORD_DEFAULT);
     $fetchUser = mysqli_fetch_assoc($result);
     $sno = $fetchUser['sno'];
     if ($password !== $confirmPassword) {
-        $redirectURL = $lastPage . (strpos($lastPage, '?') !== false ? '&' : '?') . "resetPass=false";
+        $redirectURL = $lastPage ."?resetPass=false";
         header("Location: " . $redirectURL);
         exit; 
     }
     elseif ($sno == NULL ) {
-        $redirectURL = $lastPage . (strpos($lastPage, '?') !== false ? '&' : '?') . "resetPass=false";
+        $redirectURL = $lastPage . "?resetPass=false";
         header("Location: " . $redirectURL);
         exit; 
     }
@@ -29,12 +29,12 @@ $hashPassword = password_hash($password, PASSWORD_DEFAULT);
             $changePasssword = "UPDATE `login_form` SET `password` = '$hashPassword' WHERE `sno` = '$sno';";
             $ChngPass_Result = mysqli_query($con, $changePasssword);
           if ($ChngPass_Result) {
-              $redirectURL = $lastPage . (strpos($lastPage, '?') !== false ? '&' : '?') . "resetPass=true";
+              $redirectURL = $lastPage . "?resetPass=true";
               header("Location: " . $redirectURL);
               exit; 
           }
         }catch (mysqli_sql_exception) {
-            $redirectURL = $lastPage . (strpos($lastPage, '?') !== false ? '&' : '?') . "resetPass=false";
+            $redirectURL = $lastPage . "?resetPass=false";
             header("Location: " . $redirectURL);
             exit; 
         }

@@ -19,11 +19,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $usernameExists_Result = mysqli_query($con, $usernameExists);
 
   if ($password !== $confirmPassword) {
-      $redirectURL = $lastPage . (strpos($lastPage, '?') !== false ? '&' : '?') . "signUp=false";
+      $redirectURL = $lastPage . "?signUp=false";
       header("Location: " . $redirectURL);
       exit; 
   } elseif (mysqli_num_rows($emailExists_Result) > 0 || mysqli_num_rows($usernameExists_Result) > 0) {
-      $redirectURL = $lastPage . (strpos($lastPage, '?') !== false ? '&' : '?') . "signUp=false";
+      $redirectURL = $lastPage . "?signUp=false";
       header("Location: " . $redirectURL);
       exit; 
   } else {
@@ -32,12 +32,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           ('$name', '$username', '$email', '$hashPassword', '$dob', '$currentTime');";
           $sql_Result = mysqli_query($con, $sql);
           if ($sql_Result) {
-              $redirectURL = $lastPage . (strpos($lastPage, '?') !== false ? '&' : '?') . "signUp=true";
+              $redirectURL = $lastPage . "?signUp=true";
               header("Location: " . $redirectURL);
               exit; 
           }
       } catch (mysqli_sql_exception) {
-          $redirectURL = $lastPage . (strpos($lastPage, '?') !== false ? '&' : '?') . "signUp=false";
+          $redirectURL = $lastPage . "?signUp=false";
           header("Location: " . $redirectURL);
           exit; 
       }
