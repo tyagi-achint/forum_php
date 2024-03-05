@@ -11,7 +11,7 @@ if (isset($_GET['signUp']) && $_GET['signUp'] === 'false') {
 <script>
 setTimeout(function() {
     window.location.href = '/Xampp_files/Php/forum_php/index.php';
-}, 5000);
+}, 3000);
 let SignupAlert = document.getElementById('SignupAlert');
 let Signupclose = document.getElementById('Signupclose');
 Signupclose.onclick = function() {
